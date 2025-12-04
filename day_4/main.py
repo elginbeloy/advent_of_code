@@ -34,3 +34,23 @@ for i in range(rows):
       grabbed_count += 1
 
 print(grabbed_count)
+
+
+###### PART TWO ######
+
+total_grabbed = 0
+while True:
+  grabbed_count = 0
+  for i in range(rows):
+    for j in range(cols):
+      if can_be_grabbed(i, j):
+        grid[i][j] = "."
+        grabbed_count += 1
+        total_grabbed += 1
+  if grabbed_count == 0:
+    break
+  else:
+    print(grabbed_count)
+
+print(total_grabbed)
+
